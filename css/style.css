@@ -1,5 +1,160 @@
 @charset "utf-8";
 
-h1, h2, h3 {
+/* Recomendações
+usar id para trabalhar com JS
+e class para css.
+
+para posicionamento absoluto coloque o pai como relativo e filho como absoluto
+assim podemos posicionar o filho em relação ao pai, dependem um do outro.
+*/
+
+body {
     font-family: 'Outfit', sans-serif;
+    background-image: url(../src/imagens/fundo-site.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+header.cabecalho { 
+    /*Coloquei propriedades no pai para mover os filhos */
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    /*Alinha os items verticalmente*/
+    gap: 15px; 
+    /*Cria um espaço entre os items (Utilizado somente com display:flex;)*/
+    padding-top: 50px;
+}
+
+header.cabecalho h1.titulo {
+    color: #f1ecff;
+}
+
+header.cabecalho img.pokebola {
+    width: 25px;
+    height: 25px;
+}
+
+main.conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 60px 0px;
+}
+
+div.container-imagem {
+    text-align: center;
+    /* alinha os elementos dentro da div ao centro */
+}
+img.imagem-pokemon {
+    max-width: 100%;
+    max-height: 280px;
+    padding: 20px;
+}
+
+div.descricao {
+    background-color: rgba(179, 177, 185, 0.7);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+h3.titulo {
+    background-color: #333;
+    color: #f1ecff;
+    font-size: 15px;
+    padding: 12px;
+}
+
+p.texto {
+    font-size: 14px;
+    padding: 12px;
+    text-align: justify;
+     /* deixa o texto mais quadrado */
+    max-height: 80px;
+    overflow-y: auto;
+    /* para o texto não vaze */
+}
+
+ul.lista-pokemons {
+    width: 310px;
+    height: 520px;
+    position: relative;
+    /* Position absolutive e relative geralmente andam juntos para posicionar elementos */
+}
+
+li.fundo-1 {
+    background: url(../src/imagens/fundo-card-1.jpg) no-repeat;
+}
+
+li.fundo-2 {
+    background: url(../src/imagens/fundo-card-2.jpg) no-repeat;
+}
+
+li.fundo-3 {
+    background: url(../src/imagens/fundo-card-3.jpg) no-repeat;
+}
+
+li.cartao {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    /* Para dar o efeito de folha por cima de folha. */
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: opacity 0.3s ease-in-out;
+    padding: 12px;
+}
+
+li.cartao .info {
+    background-color: rgba(179, 177, 185, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+li .nome {
+    color: #f1ecff;
+    font-size: 22px;
+}
+
+li .vida {
+    background-color: #333;
+    color: #f1ecff;
+    padding: 6px 10px;
+    border-radius: 20px;
+}
+
+li.cartao.selecionado {
+    opacity: 1;
+    z-index: 1;
+    /* eixos x,y,z z é o eixo de profundidade (3d) valor 1 força ele a vim mais pra frente, da a impressao de um baralho de cartas puxando a carta pra cima */
+}
+
+button.btn-seta {
+    background-color: #fff; 
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: 0;
+    cursor: pointer; 
+     /*faz com que a setinha do mouse mude quando passar emcima do botão  */
+    transition: background-color 400ms ease-in-out;
+     /* Criar um tempo de transição para o backgroundcolor */
+     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+button.btn-voltar {
+    transform: rotateY(180deg);
+    /* Roda o elementos a 180graus em volta do eixo y */
+}
+
+button.btn-seta:hover {
+    background-color: #8351fe;
 }

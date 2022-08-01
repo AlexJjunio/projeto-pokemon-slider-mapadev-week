@@ -1,0 +1,35 @@
+/* f12 para inspecionar no navegador e selecionar celular para simular na tela de um dispositivel movel */
+/* ctrl u no git hub aparece todo codigo */
+
+@media (max-width: 620px) {
+    main.conteudo {
+        padding: 0px 15px;
+        gap: 10px;
+    }
+
+    .btn-seta {
+        width: 20px;
+        height: 20px;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    ul.lista-pokemons {
+        height: 400px;
+    }
+
+    img.imagem-pokemon {
+        max-height: 200px;
+    }
+
+    h2.nome {
+        max-width: 50%;
+        font-size: 14px;
+    }
+
+    p.vida {
+        font-size: 12px;
+    }
+}
