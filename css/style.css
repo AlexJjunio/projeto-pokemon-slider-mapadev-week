@@ -97,6 +97,7 @@ li.fundo-3 {
 }
 
 li.cartao {
+    opacity: 0;
     height: 100%;
     display: flex;
     flex-direction: column;
